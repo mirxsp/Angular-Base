@@ -1,0 +1,12 @@
+<div class="overlay">
+    <div class="modal-window">
+        <div class="content">
+            <h2 class="title">{{title}} <app-button class="modal-cross" [iconName]="'times'" (click)="answerModal(false)"></app-button> </h2>
+            <p>{{message}}</p>
+        </div>
+        <div class="actions">
+            <app-button [text]="cancelButtonText" (click)="answerModal(false)"></app-button>
+            <app-button [text]="okButtonText" (click)="answerModal(true)"></app-button>
+        </div>
+    </div>
+</div>

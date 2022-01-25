@@ -1,0 +1,10 @@
+<app-header>Test</app-header>
+<app-button [text]="'Show modal'" (click)="showModalWindow()"></app-button>
+{{lastModalResult}}
+<app-info [title]="'title_text'" [text]="'test_text'">
+    <app-button [text]="'text'" [iconName]="'sun'"></app-button>
+</app-info>
+<div class="courses-container">
+<app-course-list [courses]="courses" [editable]="true"></app-course-list>
+</div>
+<app-modal-window *ngIf="showModal" [title]="'title'" [message]="'text'" [okButtonText]="'ok'" [cancelButtonText]="'cancel'" (onResult)="setModalResult($event)"></app-modal-window>

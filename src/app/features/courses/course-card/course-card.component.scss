@@ -1,0 +1,23 @@
+.course-card{
+    padding: 0.5em;
+    box-shadow:0 1px 1px 0 rgb(66 66 66 / 8%), 0 1px 3px 1px rgb(66 66 66 / 16%);
+    width: fit-content;
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    max-width: 80%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.course-description{
+    padding: 0.4em;
+    max-width: 70%;
+    flex-grow: 1;
+}
+
+.course-additional-info{
+    padding: 0.4em;
+    flex-grow: 3;
+}

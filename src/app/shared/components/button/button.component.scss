@@ -1,0 +1,21 @@
+$font-color: black;
+.button {
+    display: inline-block;
+    padding: 0.4em 0.8em;
+    user-select: none;
+    width: fit-content;
+    cursor: pointer;
+    color: $font-color;
+
+    &:hover{
+        background: rgba($font-color, 0.04);
+    }
+    
+    &:focus{
+        background: rgba($font-color, 0.12);
+    }
+
+    &:active{
+        background: rgba($font-color, 0.12);
+    }
+}
