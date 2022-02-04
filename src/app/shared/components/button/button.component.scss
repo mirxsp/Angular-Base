@@ -1,18 +1,18 @@
 $font-color: black;
-.button {
+:host {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
     display: inline-block;
     padding: 0.4em 0.8em;
     user-select: none;
     width: fit-content;
     cursor: pointer;
     color: $font-color;
+    background: transparent;
+    border: none;
 
     &:hover{
         background: rgba($font-color, 0.04);
-    }
-    
-    &:focus{
-        background: rgba($font-color, 0.12);
     }
 
     &:active{

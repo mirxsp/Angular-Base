@@ -24,9 +24,6 @@ export class CourseCardComponent implements OnInit, OnChanges {
                 this.durationPostfix = this.data.duration < 120 ? 'hour' : 'hours';
                 this.duration = dateLocal;
             }
-            if (this.data.authors) {
-                this.authors = this.data.authors.join(', ');
-            }
             if (this.data.creationDate) {
                 this.creationDate = this.data.creationDate.toDateString();
             }

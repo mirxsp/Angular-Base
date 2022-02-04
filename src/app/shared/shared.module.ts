@@ -10,7 +10,11 @@ const COMPONENTS = [ButtonComponent, HeaderComponent, InfoComponent, SearchCompo
     CommonModule,
     FontAwesomeModule
   ],
-  exports: COMPONENTS
+  exports: [
+      COMPONENTS,
+      CommonModule
+  ]
 })
 export class SharedModule {
+
 }

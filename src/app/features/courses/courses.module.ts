@@ -14,7 +14,6 @@ import { CourseListComponent } from './course-list/course-list.component';
     CourseListComponent
   ],
   imports: [
-    CommonModule,
     SharedModule
   ],
   exports: [

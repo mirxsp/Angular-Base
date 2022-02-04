@@ -1,12 +1,14 @@
-<div class="course-card">
-    <div class="course-description">
-        <h2>{{ data.title }}</h2>
-        <p>{{ data.description }}</p>
-    </div>
-    <div class="course-additional-info">
-        <p><b>Authors:</b> {{ authors }}</p>
-        <p><b>Duration:</b> {{ duration | date: "HH:mm" }} {{ durationPostfix }}</p>
-        <p><b>Created:</b> {{ data.creationDate | date: "dd.MM.YYYY" }}</p>
-        <ng-content></ng-content>
-    </div>
+<div class="course-description">
+    <h2>{{ data.title }}</h2>
+    <p>{{ data.description }}</p>
+</div>
+<div class="course-additional-info">
+    <p>
+        <b>Authors:</b>
+        <ng-container *ngFor="let author of data.authors; last as isLast">
+            {{author + (isLast ? '' : ', ')}}
+        </ng-container></p>
+    <p><b>Duration:</b> {{ duration | date: "HH:mm" }} {{ durationPostfix }}</p>
+    <p><b>Created:</b> {{ data.creationDate | date: "dd.MM.YYYY" }}</p>
+    <ng-content></ng-content>
 </div>

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CourseCardData } from '../course-card/course-card-data';
+import { CourseCardComponent } from '../course-card/course-card.component';
 
 @Component({
   selector: 'app-course-list',
@@ -31,4 +32,7 @@ export class CourseListComponent implements OnInit {
     this.onCourseShow.emit(id);
   }
 
+  trackByCourseId(index: number, course: CourseCardData){
+      return course.id;
+  }
 }
