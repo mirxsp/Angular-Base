@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { library } from '@fortawesome/fontawesome-svg-core';
+import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
     declarations: [],
     imports: [],
 })
 export class IconsModule {
-    constructor() {
-        library.add(fas, fab);
+    constructor(library: FaIconLibrary) {
+        library.addIconPacks(fas, fab);
     }
 }

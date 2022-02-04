@@ -1,5 +1,5 @@
 $font-color: black;
-:host {
+:host-context(.active) {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1rem;
     display: inline-block;

@@ -13,8 +13,4 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
     providers: [],
     bootstrap: [AppComponent],
 })
-export class AppModule {
-    constructor(library: FaIconLibrary){
-        library.addIconPacks(fas, fab);
-    }
-}
+export class AppModule {}
