@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
+import { CoursesModule } from './features/courses/courses.module';
+import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 
 @NgModule({
     declarations: [AppComponent],
-    imports: [BrowserModule, AppRoutingModule],
+    imports: [BrowserModule, CoursesModule, FontAwesomeModule],
     providers: [],
     bootstrap: [AppComponent],
 })
