@@ -8,7 +8,7 @@
         <ng-container *ngFor="let author of data.authors; last as isLast">
             {{author + (isLast ? '' : ', ')}}
         </ng-container></p>
-    <p><b>Duration:</b> {{ duration | date: "HH:mm" }} {{ durationPostfix }}</p>
+    <p><b>Duration:</b> {{ data.duration | duration }}</p>
     <p><b>Created:</b> {{ data.creationDate | date: "dd.MM.YYYY" }}</p>
     <ng-content></ng-content>
 </div>
