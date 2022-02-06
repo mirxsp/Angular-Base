@@ -1,1 +1,20 @@
-<p>login works!</p>
+<h1>Login</h1>
+<form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+    <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" required appEmailValidator #email="ngModel" [(ngModel)]='emailValue'/>
+        <ng-container *ngIf="email.invalid && (email.touched || email.dirty || loginForm.submitted)">
+            <div class="error" *ngIf="email.errors?.required">Email is required</div>
+            <div class="error" *ngIf="email.errors?.email">Email is invalid</div>
+        </ng-container>
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" required #password="ngModel" [(ngModel)]='passwordValue' />
+        <ng-container *ngIf="password.invalid && (password.touched || password.dirty || loginForm.submitted)">
+            <div class="error" *ngIf="password.errors?.required">Password is required</div>
+        </ng-container>
+    </div>
+    <button app-button [text]="'Login'" type="submit" [disabled]="loginForm.invalid"></button>
+</form>
+<p>If you don't have account you can <a>Registration</a></p>

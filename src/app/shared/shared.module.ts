@@ -10,6 +10,7 @@ import {
 } from './components';
 import { DurationPipe } from './pipes/duration.pipe';
 import { IconsModule } from '../icons/icons.module';
+import { EmailValidatorDirective } from './directives/email-validator.directive';
 
 const COMPONENTS = [
     DurationPipe,
@@ -18,6 +19,7 @@ const COMPONENTS = [
     InfoComponent,
     SearchComponent,
     ModalWindowComponent,
+    EmailValidatorDirective
 ];
 @NgModule({
     declarations: COMPONENTS,

@@ -1,0 +1,9 @@
+:host{
+    display: flex;
+    flex-direction: row;
+}
+
+.search-input{
+    margin: 0 0.5em;
+    flex-grow: 2;
+}

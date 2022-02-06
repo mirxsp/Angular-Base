@@ -3,13 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { CoursesModule } from './features/courses/courses.module';
-import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { fab } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LoginModule } from './features/login/login.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [AppComponent],
-    imports: [BrowserModule, CoursesModule, FontAwesomeModule],
+    imports: [
+        BrowserModule,
+        CoursesModule,
+        FontAwesomeModule,
+        LoginModule,
+    ],
     providers: [],
     bootstrap: [AppComponent],
 })
