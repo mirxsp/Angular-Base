@@ -1,0 +1,26 @@
+@import '../../shared/variables.scss';
+:host, form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error{
+    font-size: 0.7em;
+    color: $danger;
+    margin: 0;
+    position: absolute;
+}
+
+input.ng-invalid.ng-touched{
+    border-style: solid;
+    border-color: $danger;
+}
+
+label{
+    display: block;
+}
+
+div{
+    margin-bottom: 1em;
+}

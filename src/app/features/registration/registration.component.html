@@ -1,1 +1,28 @@
-<p>registration works!</p>
+<h1>Registration</h1>
+<form [formGroup]="registrationForm" #regForm="ngForm">
+    <div>
+        <label for="name">Name</label>
+        <input id="name" name="name" required minlength="6" formControlName="name">
+        <ng-container *ngIf="name?.invalid && (name?.touched || name?.dirty || regForm.submitted)">
+            <div class="error" *ngIf="name?.errors?.required">Name is required</div>
+            <div class="error" *ngIf="name?.errors?.minlength">Name should not be less than 6 symbols</div>
+        </ng-container>
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" required appEmailValidator formControlName="email"/>
+        <ng-container *ngIf="email?.invalid && (email?.touched || email?.dirty || regForm.submitted)">
+            <div class="error" *ngIf="email?.errors?.required">Email is required</div>
+            <div class="error" *ngIf="email?.errors?.email">Email is invalid</div>
+        </ng-container>
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" required formControlName="password"/>
+        <ng-container *ngIf="password?.invalid && (password?.touched || password?.dirty || regForm.submitted)">
+            <div class="error" *ngIf="password?.errors?.required">Password is required</div>
+        </ng-container>
+    </div>
+    <button app-button [text]="'Register'" [disabled]="regForm.invalid"></button>
+</form>
+<p>If you have an account you can <a>Login</a></p>
