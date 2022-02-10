@@ -9,6 +9,6 @@
             {{author + (isLast ? '' : ', ')}}
         </ng-container></p>
     <p><b>Duration:</b> {{ data.duration | duration }}</p>
-    <p><b>Created:</b> {{ data.creationDate | date: "dd.MM.YYYY" }}</p>
+    <p><b>Created:</b> {{ data.creationDate | creationDate }}</p>
     <ng-content></ng-content>
 </div>

@@ -12,9 +12,13 @@ import { DurationPipe } from './pipes/duration.pipe';
 import { IconsModule } from '../icons/icons.module';
 import { EmailValidatorDirective } from './directives/email-validator.directive';
 import { FormsModule } from '@angular/forms';
+import { CreationDatePipe } from './pipes/creation-date.pipe';
+import { StringJoinerPipe } from './pipes/string-joiner.pipe';
 
 const COMPONENTS = [
     DurationPipe,
+    CreationDatePipe,
+    StringJoinerPipe,
     ButtonComponent,
     HeaderComponent,
     InfoComponent,
