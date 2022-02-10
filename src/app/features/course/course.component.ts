@@ -14,7 +14,7 @@ export class CourseComponent implements OnInit {
         title: new FormControl('', Validators.required),
         description: new FormControl('', Validators.required),
         newAuthor: new FormControl('', ValidateAuthorName),
-        authors: new FormArray([], Validators.required),
+        authors: new FormArray([]),
         duration: new FormControl('', Validators.required),
     });
     constructor() {}
@@ -23,6 +23,18 @@ export class CourseComponent implements OnInit {
 
     get authors() {
         return this.courseForm.get('authors') as FormArray;
+    }
+
+    get title(){
+        return this.courseForm.get('title');
+    }
+
+    get description(){
+        return this.courseForm.get('description');
+    }
+
+    get duration(){
+        return this.courseForm.get('duration');
     }
 
     addAuthor() {
