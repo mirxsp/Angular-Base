@@ -1,2 +1,2 @@
-<input [placeholder]="placeholder" class="search-input" type="search" #searchinput>
-<button app-button [text]="'Search'" (click)="search(searchinput.value)"></button>
+<input [placeholder]="placeholder" class="search-input" type="search" [(ngModel)]='searchValue'>
+<button app-button [text]="'Search'" (click)="search()"></button>

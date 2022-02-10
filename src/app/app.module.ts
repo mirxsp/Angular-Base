@@ -7,6 +7,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginModule } from './features/login/login.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistrationModule } from './features/registration/registration.module';
+import { CourseModule } from './features/course/course.module';
 
 @NgModule({
     declarations: [AppComponent],
@@ -16,6 +17,7 @@ import { RegistrationModule } from './features/registration/registration.module'
         FontAwesomeModule,
         LoginModule,
         RegistrationModule,
+        CourseModule
     ],
     providers: [],
     bootstrap: [AppComponent],

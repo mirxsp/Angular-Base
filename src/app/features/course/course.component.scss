@@ -1,0 +1,95 @@
+@import '../../shared/variables.scss';
+form{
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error{
+    font-size: 0.7em;
+    color: $danger;
+    margin: 0;
+}
+
+input.ng-invalid.ng-touched{
+    border-style: solid;
+    border-color: $danger;
+}
+
+label{
+    display: block;
+}
+
+div{
+    margin-bottom: 1em;
+}
+
+textarea{
+    height: 10em;
+}
+
+#author-name{
+    margin-bottom: 0.4em;
+}
+
+.title-container{
+    display: flex;
+    align-items: center;
+
+    input{
+        height: fit-content;
+        flex-grow: 2;
+    }
+
+    button{
+        margin: 0 0.5em;
+        flex-grow: 0;
+    }
+}
+
+.description-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.authors-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column-start: 2;
+    max-width: 40em;
+    grid-row-start: 1;
+    grid-row-end: 4;
+
+    p.author-name{
+        margin-right: 0.2em;
+    }
+
+    div{
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.additional-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    h2{
+        align-self: center;
+    }
+
+    button{
+        display: block;
+        align-self: center;
+    }
+
+    div.fc-container{
+        display: flex;
+        flex-direction: column;
+        padding: 0 0.5em;
+    }
+}

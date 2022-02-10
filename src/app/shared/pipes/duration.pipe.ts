@@ -6,7 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class DurationPipe implements PipeTransform {
 
   transform(value: number): string {
-      const hours = Number((value/60).toFixed(0));
+      if(value<0) return "00:00 hour";
+      const hours = Math.floor(value/60);
       const minutes = (value%60);
       const postfix = value >= 120 ? 'hours' : 'hour';
       return `${this.zeroFill(hours)}:${this.zeroFill(minutes)} ${postfix}`;

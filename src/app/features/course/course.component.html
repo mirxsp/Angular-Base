@@ -1,1 +1,32 @@
-<p>course works!</p>
+<form [formGroup]="courseForm">
+    <label for="title">Title</label>
+    <div class="title-container">
+        <input name="title" id="title" formControlName="title">
+        <button app-button type="submit" [text]="'Create course'" [disabled]="courseForm.invalid"></button>
+    </div>
+    <div class="description-container">
+        <label for="description">Description</label>
+        <textarea name="description" id="description" formControlName="description"></textarea>
+    </div>
+    <div class="additional-info">
+        <div class="fc-container">
+            <h2>Add authors</h2>
+            <label for="author-name">Author name</label>
+            <input name="author-name" id="author-name" formControlName="newAuthor">
+            <button app-button [text]="'Create author'" [disabled]="courseForm.get('newAuthor')?.errors || courseForm.get('newAuthor')?.value.length===0" (click)="addAuthor()"></button>
+        </div>
+        <div class="authors-list">
+            <h2>Authors list</h2>
+            <div *ngFor="let author of authors.controls; let i = index">
+                <p class="author-name">{{author.value}}</p>
+                <button app-button [text]="'Delete'" (click)="deleteAuthor(i)"></button>
+            </div>
+        </div>
+        <div class="fc-container">
+            <h2>Duration</h2>
+            <label for="duration">Duration</label>
+            <input min="0" type="number" id="duration" name="duration" formControlName="duration">
+            <p>Duration: {{courseForm.get("duration")?.value | duration}}</p>
+        </div>
+    </div>
+</form>
