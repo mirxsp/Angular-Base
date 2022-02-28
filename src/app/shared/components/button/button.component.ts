@@ -1,10 +1,11 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit } from '@angular/core';
 import { IconName } from '@fortawesome/fontawesome-svg-core';
 
 @Component({
   selector: 'button[app-button]',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   host:{
       'class': 'active'
   }

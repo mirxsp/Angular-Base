@@ -1,11 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CourseCardData } from '../course-card/course-card-data';
-import { CourseCardComponent } from '../course-card/course-card.component';
 
 @Component({
   selector: 'app-course-list',
   templateUrl: './course-list.component.html',
-  styleUrls: ['./course-list.component.scss']
+  styleUrls: ['./course-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CourseListComponent implements OnInit {
   @Input() courses: CourseCardData[] = [];

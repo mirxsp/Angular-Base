@@ -11,8 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     CourseComponent
   ],
   imports: [
-    SharedModule,
-    ReactiveFormsModule
+    SharedModule
   ],
   exports: [
       CourseComponent

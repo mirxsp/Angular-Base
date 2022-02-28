@@ -1,9 +1,10 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-modal-window',
   templateUrl: './modal-window.component.html',
-  styleUrls: ['./modal-window.component.scss']
+  styleUrls: ['./modal-window.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ModalWindowComponent implements OnInit {
   @Input() title = '';

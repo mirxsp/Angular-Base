@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import {
     ValidateAuthorName,
@@ -8,6 +8,7 @@ import {
     selector: 'app-course',
     templateUrl: './course.component.html',
     styleUrls: ['./course.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CourseComponent implements OnInit {
     courseForm = new FormGroup({

@@ -11,7 +11,7 @@ import {
 import { DurationPipe } from './pipes/duration.pipe';
 import { IconsModule } from '../icons/icons.module';
 import { EmailValidatorDirective } from './directives/email-validator.directive';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreationDatePipe } from './pipes/creation-date.pipe';
 import { StringJoinerPipe } from './pipes/string-joiner.pipe';
 
@@ -29,6 +29,6 @@ const COMPONENTS = [
 @NgModule({
     declarations: COMPONENTS,
     imports: [CommonModule, FontAwesomeModule, FormsModule],
-    exports: [COMPONENTS, CommonModule, IconsModule],
+    exports: [COMPONENTS, CommonModule, IconsModule, FormsModule, ReactiveFormsModule],
 })
 export class SharedModule {}

@@ -1,9 +1,10 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-info',
   templateUrl: './info.component.html',
-  styleUrls: ['./info.component.scss']
+  styleUrls: ['./info.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class InfoComponent implements OnInit, OnChanges {
   @Input() title = '';
@@ -15,7 +16,7 @@ export class InfoComponent implements OnInit, OnChanges {
     this.checkRequieredFields();
   }
 
-  ngOnChanges(): void { 
+  ngOnChanges(): void {
     this.checkRequieredFields();
   }
 
