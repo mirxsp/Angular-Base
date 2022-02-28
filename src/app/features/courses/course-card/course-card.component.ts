@@ -1,10 +1,11 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit } from '@angular/core';
 import { CourseCardData } from './course-card-data';
 
 @Component({
     selector: 'app-course-card',
     templateUrl: './course-card.component.html',
     styleUrls: ['./course-card.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CourseCardComponent implements OnInit, OnChanges {
     @Input() data!: CourseCardData;
